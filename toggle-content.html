@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      details[open] summary {
+        color: #007bff;
+        transform: scale(1.01);
+      }
+      summary {
+        cursor: pointer;
+        padding: 8px;
+        background: #f0f0f0;
+        border-radius: 4px;
+        color: black;
+        transition: color 0.3s ease, transform 0.3s ease;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Tags for Toggleable content</h1>
+    <details>
+      <summary>Click to reveal more info</summary>
+      <p>
+        This is the hidden content. You can place any HTML here — text, images,
+        even forms!
+      </p>
+    </details>
+  </body>
+</html>
+
+<!-- Add open to <details> to make it expanded by default: -->
+
+<!-- summary::marker is not supported in all browsers (especially not in Chromium-based ones like Chrome/Edge). -->
+
+<!-- This pair of HTML elements "details" and "summary" lets you create collapsible content, great for FAQs, instructions, or hiding long blocks of text. -->
