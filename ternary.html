@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ternary Operator</title>
+    <style>
+      .sale {
+        color: blue;
+      }
+
+      .regular {
+        color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="static-message"></div>
+    <div id="dynamic-message"></div>
+    <p id="price-1"></p>
+    <p id="price-2"></p>
+    <script>
+      // 1. Rendering a static value
+      const hasNotifications = true;
+      document.getElementById("static-message").textContent = hasNotifications
+        ? "You have messages"
+        : "Inbox is empty";
+
+      // 2. Wrap in a function to render dynamically
+      function updateMessage(hasNotifications) {
+        document.getElementById("dynamic-message").textContent =
+          hasNotifications ? "You have messages" : "Inbox is empty";
+      }
+      updateMessage(false);
+
+      // 3. Dynamic Class and Text Based on isOnSale
+      const isOnSale = true;
+      const priceEl = document.getElementById("price-1");
+      priceEl.textContent = isOnSale ? "On sale!" : "Regular price";
+      priceEl.className = isOnSale ? "sale" : "regular";
+
+      // 4. Wrap in a function
+      function updatePriceStatus(isOnSale) {
+        const priceEl = document.getElementById("price-2");
+        priceEl.textContent = isOnSale ? "On sale!" : "Regular price";
+        priceEl.className = isOnSale ? "sale" : "regular";
+      }
+      updatePriceStatus(false);
+    </script>
+  </body>
+</html>
